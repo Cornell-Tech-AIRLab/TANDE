@@ -22,7 +22,7 @@ When webcam mirroring is enabled, the browser runs face detection with OpenCV an
 ## Repository Layout
 
 ```text
-FINAL_NVC/
+/
 ├── FAFrontend/
 │   └── r3f-virtual-therapist-frontend/
 │       ├── public/
