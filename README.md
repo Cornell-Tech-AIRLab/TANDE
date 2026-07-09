@@ -2,12 +2,16 @@
 
 This repository contains the interactive app only: a browser-based 3D avatar interface with speech-driven conversation, optional webcam emotion mirroring, text-to-speech, and lip-sync.
 
+## System Requirements
+
+## Introduction
+
 ## Overview
 
 - `FAFrontend/r3f-virtual-therapist-frontend`: React + Vite frontend with the 3D avatar, microphone controls, webcam FER, and experiment controls for backchannel behavior.
 - `FABackend/r3f-virtual-therapist-backend`: Node/Express backend that generates dialogue, synthesizes speech, and produces lip-sync timing data.
 
-## How the App Works
+### How the Application Works
 
 1. The user speaks through the browser microphone using the Web Speech API.
 2. The frontend sends the transcript and dialogue history to the backend.
@@ -19,7 +23,7 @@ This repository contains the interactive app only: a browser-based 3D avatar int
 
 When webcam mirroring is enabled, the browser runs face detection with OpenCV and emotion inference with ONNX Runtime Web, then maps detected emotion to avatar facial expression while the avatar is idle.
 
-## Repository Layout
+### Repository Layout
 
 ```text
 /
@@ -38,7 +42,7 @@ When webcam mirroring is enabled, the browser runs face detection with OpenCV an
 └── README.md
 ```
 
-## Requirements
+### Requirements
 
 - Node.js 20 or newer recommended
 - npm
@@ -48,7 +52,7 @@ When webcam mirroring is enabled, the browser runs face detection with OpenCV an
 - Optional: an ElevenLabs API key for alternative speech synthesis
 - The FER model file `emotion-ferplus-8.onnx`, placed in the app's `models` folder alongside `emotion-ferplus-8.txt`
 
-## Platform Notes
+### Platform Notes
 
 - The repository includes Rhubarb Lip Sync binaries for macOS and Windows.
 - Linux users must provide a compatible Rhubarb binary and update the backend path configuration if lip-sync is required.
@@ -119,7 +123,7 @@ FAFrontend/r3f-virtual-therapist-frontend/public/models/emotion-ferplus-8.onnx
 
 The app can still run without this file, but the webcam emotion-mirroring feature in `VideoFeed.jsx` will fail until the model is added.
 
-## Running the App
+## Running the application
 
 ### Start the backend
 
@@ -143,7 +147,7 @@ npm run dev
 
 The frontend uses a Vite proxy that forwards `/api/*` to `http://127.0.0.1:3000` during local development.
 
-### Open the app
+### Open the application
 
 Open the Vite URL, typically `http://127.0.0.1:5173`, in a Chromium-based browser. Allow microphone access for speech input, and allow camera access only if you want webcam emotion mirroring.
 
@@ -181,3 +185,7 @@ Open the Vite URL, typically `http://127.0.0.1:5173`, in a Chromium-based browse
 
 - Microphone and camera streams should only be collected with informed user consent.
 - The system is intended for research and prototyping in supportive dialogue, not for medical diagnosis, treatment, or emergency intervention.
+
+## Contributing
+
+## Further issues and questions
