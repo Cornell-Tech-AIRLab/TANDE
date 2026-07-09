@@ -8,21 +8,6 @@ This repository contains the interactive app only: a browser-based 3D avatar int
 
 ## Overview
 
-- `FAFrontend/r3f-virtual-therapist-frontend`: React + Vite frontend with the 3D avatar, microphone controls, webcam FER, and experiment controls for backchannel behavior.
-- `FABackend/r3f-virtual-therapist-backend`: Node/Express backend that generates dialogue, synthesizes speech, and produces lip-sync timing data.
-
-### How the Application Works
-
-1. The user speaks through the browser microphone using the Web Speech API.
-2. The frontend sends the transcript and dialogue history to the backend.
-3. The backend requests a structured reply containing `text`, `facialExpression`, and `animation`.
-4. The reply is converted to speech using ElevenLabs when available, or OpenAI TTS otherwise.
-5. The generated audio is processed with `ffmpeg` and Rhubarb Lip Sync to create mouth cues.
-6. The frontend plays the audio and drives avatar animation, facial expressions, and visemes in sync.
-7. While the user is speaking, the app can trigger non-verbal and/or verbal backchannels.
-
-When webcam mirroring is enabled, the browser runs face detection with OpenCV and emotion inference with ONNX Runtime Web, then maps detected emotion to avatar facial expression while the avatar is idle.
-
 ### Repository Layout
 
 ```text
@@ -41,6 +26,22 @@ When webcam mirroring is enabled, the browser runs face detection with OpenCV an
 │       └── package.json
 └── README.md
 ```
+
+`FAFrontend/r3f-virtual-therapist-frontend`: React + Vite frontend with the 3D avatar, microphone controls, webcam FER, and experiment controls for backchannel behavior.
+
+`FABackend/r3f-virtual-therapist-backend`: Node/Express backend that generates dialogue, synthesizes speech, and produces lip-sync timing data.
+
+### How the Application Works
+
+1. The user speaks through the browser microphone using the Web Speech API.
+2. The frontend sends the transcript and dialogue history to the backend.
+3. The backend requests a structured reply containing `text`, `facialExpression`, and `animation`.
+4. The reply is converted to speech using ElevenLabs when available, or OpenAI TTS otherwise.
+5. The generated audio is processed with `ffmpeg` and Rhubarb Lip Sync to create mouth cues.
+6. The frontend plays the audio and drives avatar animation, facial expressions, and visemes in sync.
+7. While the user is speaking, the app can trigger non-verbal and/or verbal backchannels.
+
+When webcam mirroring is enabled, the browser runs face detection with OpenCV and emotion inference with ONNX Runtime Web, then maps detected emotion to avatar facial expression while the avatar is idle.
 
 ### Requirements
 
