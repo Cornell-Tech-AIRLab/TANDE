@@ -2,7 +2,7 @@
 
 Embodied conversational agents (ECAs) need effective *empathic grounding* to foster social support and engagement, relying on both verbal and nonverbal backchanneling. Young adults are increasingly turning to ECAs for emotional support, yet how backchannel modality, nonverbal cues like nodding versus combined verbal-and-nonverbal cues like *mhm*, shapes their experience of rapport, empathy, and engagement remains poorly understood. TANDE is an LLM-powered, multimodal ECA system built to isolate and study this question: real-time facial emotion detection feeds an empathic grounding pipeline, while an independent backchannel controller lets us manipulate verbal and nonverbal listening cues as controlled experimental conditions. ![TANDE system diagram](/tande.png) In a within-subjects study with 36 young adults, we found that backchannel modality alone did not significantly shape perceived rapport, empathy, or engagement, but participants showed a clear qualitative preference for subtle, nonverbal cues over verbal ones, and individual differences, particularly gender, predicted these outcomes more strongly than modality itself. We derive design recommendations for building emotionally supportive ECAs for young adults, a population with high mental health needs and limited access to care. This repository provides the full TANDE system implementation, including the facial emotion detection pipeline, LLM dialogue backbone, backchannel controller, and avatar rendering.
 
-## System Requirements
+A citation will be added once the paper is publicly available.
 
 ## Overview
 
