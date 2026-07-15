@@ -188,5 +188,18 @@ Open the Vite URL, typically `http://127.0.0.1:5173`, in a Chromium-based browse
 - The system is intended for research and prototyping in supportive dialogue, not for medical diagnosis, treatment, or emergency intervention.
 
 ## Contributing
+Contributions are what make the open source community such an amazing place to learn, inspire, and create. Any contributions you make are greatly appreciated.
+
+Fork the repo and create a pull request to improve the tutorial. You can also simply open an issue with the tag "enhancement". Don't forget to give the project a star! Thanks again!
+
+Fork the Project
+Create your Feature Branch (git checkout -b feature/AmazingFeature)
+Commit your Changes (git commit -m 'Add some AmazingFeature')
+Push to the Branch (git push origin feature/AmazingFeature)
+Open a Pull Request
 
 ## Further issues and questions
+If you have issues or questions, don't hesitate to contact:
+
+- Ann-Kareen Gedeus (ag2637@cornell.edu)
+- Jack Good (jlg444@cornell.edu
